@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ruta Libre Coffee — Bridging LATAM Producers & Europe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Simple fade-in on scroll -->
+    <style>
+        [data-fade] {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all .7s ease;
+        }
+
+        [data-fade].visible {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const io = new IntersectionObserver((e) => e.forEach(el => el.isIntersecting && el.target.classList.add("visible")), { threshold: .3 });
+            document.querySelectorAll("[data-fade]").forEach(el => io.observe(el));
+        });
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Hero  -->
+    <header class="relative bg-cover bg-center"
+        style="background-image:url('https://images.unsplash.com/photo-1481091488268-4e61a103fb9f?auto=format&fit=crop&w=1920&q=80');">
+        <div class="backdrop-brightness-50">
+            <div class="max-w-6xl mx-auto px-6 py-24 text-center text-white">
+                <h1 class="text-5xl font-extrabold mb-4 drop-shadow-lg">Coffee Without Borders</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                    We turn language, logistics and trust gaps into seamless trade—so Latin American farmers prosper and
+                    European roasters delight their customers.
+                </p>
+                <a href="#contact"
+                    class="inline-block bg-amber-400 hover:bg-amber-300 font-semibold text-gray-900 rounded-xl px-8 py-4 transition">
+                    Let’s Talk Coffee
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Value Snapshot -->
+    <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8" data-fade>
+        <div class="text-center">
+            <h3 class="text-2xl font-bold mb-2">98 % On-time Delivery</h3>
+            <p class="">Because “good coffee late” isn’t good enough.</p>
+        </div>
+        <div class="text-center">
+            <h3 class="text-2xl font-bold mb-2">Dual-Culture Fluency</h3>
+            <p>We speak contracts in EU offices and trust on Latin fincas.</p>
+        </div>
+        <div class="text-center">
+            <h3 class="text-2xl font-bold mb-2">One Call, Both Sides</h3>
+            <p>Your single point of contact—whether you farm the beans or roast them.</p>
+        </div>
+    </section>
+
+    <!-- Problems We Solve -->
+    <section class="bg-white py-16 border-y" data-fade>
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Where Others Get Stuck, We Deliver</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Producers -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">For Producers</h3>
+                    <ul class="space-y-3 list-disc list-inside">
+                        <li>Open Europe’s doors—no language barrier, no mystery paperwork.</li>
+                        <li>Pool micro-lots to fill containers and cut freight costs.</li>
+                        <li>On-finca quality checks and moisture tests before anything ships.</li>
+                        <li>Mediation & fair contracts that guard your margins.</li>
+                    </ul>
+                </div>
+                <!-- Importers -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">For Importers & Roasters</h3>
+                    <ul class="space-y-3 list-disc list-inside">
+                        <li>Reliable, curated farms matched to your roast profile.</li>
+                        <li>Local EU-time-zone contact for rapid updates and issue-solving.</li>
+                        <li>Risk-free logistics: EU customs, aflatoxin limits, perfect container placement.</li>
+                        <li>Transparent pricing & guaranteed quality on arrival.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three-Step Process -->
+    <section class="max-w-5xl mx-auto px-6 py-16" data-fade>
+        <h2 class="text-3xl font-bold text-center mb-12">How We Turn Green Beans into Green Lights</h2>
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+            <div class="p-6 bg-gray-100 rounded-2xl shadow">
+                <span class="text-4xl font-black">1</span>
+                <h3 class="text-xl font-semibold my-2">Connect</h3>
+                <p>We match producers & buyers whose values, volumes and cup scores align.</p>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-2xl shadow">
+                <span class="text-4xl font-black">2</span>
+                <h3 class="text-xl font-semibold my-2">Coordinate</h3>
+                <p>Contracts, export prep, grouped shipping, customs—all choreographed.</p>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-2xl shadow">
+                <span class="text-4xl font-black">3</span>
+                <h3 class="text-xl font-semibold my-2">Deliver</h3>
+                <p>Cargo arrives on-time, on-spec, and everyone gets paid—no surprises.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Story -->
+    <section class="bg-gray-900 text-gray-100 py-16" data-fade>
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Meet Janusz Nowakowski</h2>
+            <p class="text-lg leading-relaxed">
+                Engineer by training, problem-solver by nature, coffee lover by destiny.
+                After 100+ origin trips and countless nights on cupping tables, I learned a simple truth:
+                **great coffee dies in translation**—whether that’s language, logistics or trust.
+                Ruta Libre exists to fix that, one relationship at a time. :contentReference[oaicite:0]{index=0}
+            </p>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Banner -->
+    <section id="contact" class="bg-amber-400 py-14">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to brew new possibilities?</h2>
+            <p class="text-lg mb-8">Book a quick call or send a brief—let’s explore if we’re the right bridge for you.
+            </p>
+            <a href="mailto:hello@rutalibre.coffee"
+                class="inline-block bg-gray-900 text-white font-semibold rounded-xl px-8 py-4 hover:bg-gray-700 transition">
+                Email Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 text-center py-6">
+        <p class="mb-2">© 2025 Ruta Libre Coffee · Switzerland | El Salvador</p>
+        <p>
+            <a href="tel:+41787482377" class="underline">+41 78 748 23 77</a> ·
+            <a href="https://www.linkedin.com/in/janusznowakowski" class="underline" target="_blank"
+                rel="noopener">LinkedIn</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
